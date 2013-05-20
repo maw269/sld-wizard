@@ -1,0 +1,15 @@
+pid|1|VMap Level 0
+pid|2|VMap Level 1
+pid|3|VMap Level 2
+pid|4|UVMap
+pid|5|DNC
+pid|8|WVSPlus
+pid|9|VITD
+pid|16|VVOD
+pid|17|FFD
+pid|18|TOD Level 0
+pid|19|TOD Level 1
+pid|20|TOD Level 2
+pid|21|TOD Level 3
+pid|22|TOD Level 4
+pid|25|DTOP
