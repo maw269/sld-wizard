@@ -1,0 +1,22 @@
+After you have your Mono Development Environment set up (see 1-Mono-Development-Setup.txt), you can build the SLD Wizard.
+
+******************
+SLD Wizard - Build
+******************
+
+1) Load the SLD Wizard solution
+  
+   - Open Xamarin Studio
+   - Select "File > Open..." from the Menu Bar
+   - Select "<Drive>\<SLD Wizard Download Directory>\sld-wizard\SldWizardSolution\SldWizard.sln"
+      
+2) Build the SLD Wizard
+
+   - Right click on "SldWizard" under the "Solution" panel
+   - Select "Rebuild SldWizard"
+   
+3) Find the sld-wizard.exe 
+
+   - Open Windows Explorer
+   - Navigate to "<Drive>\<SLD Wizard Download Directory>\sld-wizard\SldWizardSolution\SldWizard\bin\Debug"
+   - Find the sld-wizard.exe there!

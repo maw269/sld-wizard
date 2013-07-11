@@ -1,0 +1,62 @@
+After you have built the sld-wizard.exe (see 2-Mono-Development-Build.txt), you are now ready to use the SLD Wizard.
+
+**************************
+SLD Wizard - Prerequisites
+**************************
+
+1) Spatial Data Format
+
+	- The SLD Wizard uses spapefile .dbf files to pull attribute information for SLD creation. You can convert your VPF files into SHP files using the ogr2ogr command line utility.
+	- OGR is part of the GDAL Geospatial Data Abstraction Library.
+	- You can download GDAL for Windows here: http://www.gdal.org/
+	- Look for the ogr2ogr.exe utility in your download. I'm not sure where different builds store ogr2ogr but my download had it under the bin\gdal\apps directory.
+	- Open up the Windows Command Line Utiltiy and navigate to the ogr2ogr.exe
+	- Use the following format to convert your VPF data into SHP data:
+	
+		ogr2ogr.exe "{new shape file name and path}" "gltp:/vrf/{path to library}" {feature class}@{coverage}(*)_{family}
+		
+		A specific example of the above generalization would be as follows:
+		ogr2ogr.exe "C:/data/DNC17_baseline/DNC17/COA17D/CUL/cul_buildngp.shp" "gltp:/vrf/data/DNC17_baseline/DNC17/COA17D" BUILDNGP@CUL(*)_point
+		
+	   - Ensure the names of your new shapefiles end with "p" if it is a point feature, "l" if it is a line feature, and "a" if it is an area feature. The SLD Wizard uses these designations for proper SLD creation.
+
+******************
+SLD Wizard - Usage
+******************
+
+1) Prepare SLD Wizard
+  
+   - Navigate to "<Drive>\<SLD Wizard Download Directory>\sld-wizard\SldWizardSolution\SldWizard\bin\Debug"
+   - Locate the following items (these items must reside within the same folder for the sld-wizard.exe to function):
+      - The "sld-wizard.exe"
+	  - The "images" folder
+	  - The "temp" folder
+   - Move these items to a different directory if desired
+   
+2) Use SLD Wizard
+   
+   - Create a folder to house the SLD's you will create. The SLD Wizard will not create this folder for you.
+   - Open up a Windows Command Prompt
+   - Navigate to your "sld-wizard.exe" within the Command Prompt
+   - Create SLD's with the SLD Wizard as follows:
+      sld-wizard.exe d=<Spatial Data Path> o=<SLD Output Path> p=<pid>
+	  
+	     - Where <Spatial Data Path> is full path to where your VPF shapefile .dbf files are located
+		 - Where <SLD Output Path> is the full path to the folder you created to house the SLD output
+		 - Where <pid> is the product ID number for the VPF dataset you are using
+		    - The following are the PID designations:
+				pid | 1 | VMap Level 0
+				pid | 2 | VMap Level 1
+				pid | 3 | VMap Level 2
+				pid | 4 | UVMap
+				pid | 5 | DNC
+				pid | 8 | WVSPlus
+				pid | 9 | VITD
+				pid | 16 | VVOD
+				pid | 17 | FFD
+				pid | 18 | TOD Level 0
+				pid | 19 | TOD Level 1
+				pid | 20 | TOD Level 2
+				pid | 21 | TOD Level 3
+				pid | 22 | TOD Level 4
+				pid | 25 | DTOP
