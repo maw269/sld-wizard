@@ -1,0 +1,270 @@
+The SLD Wizard was developed for windows using Mono. Mono was used for the posibility of a future port to Linux.
+These instructions are for setting up the Mono Development Environment, in order to build the SLD Wizard from source.
+The instructions are very literal, so don't be insulted.
+
+**************
+Mono - Acquire
+**************
+
+1) Create download path
+  
+   - Click the Windows "Start" buton
+   - Enter the following in the "Search programs and files" textbox:
+     cmd
+   - Enter the following at the command line:  
+     md "D:\CscSoftware\Mono for Windows, Gtk#, and XSP\"
+   - Close the command window
+   
+2) Acquire Mono
+
+   - Open Internet Explorer
+   - Type the following in the address bar:
+     http://www.mono-project.com/Main_Page
+   - Select "Download" under "Mono" section
+   - Select "Windows" unders "Latest Stable Version" section
+     NOTE: The following platforms have versions:
+     - openSUSE
+     - Mac OS X
+     - Windows
+     - Solaris
+     - Other (community-supported)
+       - Debian
+	   - Ubuntu
+     - Other (unsupported)
+       - Nokia/Maemo
+   - Select "Mono for Windows, Gtk#, and XSP"
+   - Select "Save as"
+   - Navigate to:
+     D:\CscSoftware\Mono for Windows, Gtk#, and XSP\
+   - Click the "Save" button
+
+**************
+Mono - Install
+**************
+
+1) Install Mono
+
+   - Open Windows Explorer
+   - Navigate to
+     D:\CscSoftware\Mono for Windows, Gtk#, and XSP\
+   - Right click on "mono-<Version>-gtksharp-<Version>-win32-0.exe"
+   - Select "Run as administrator" from the context menu
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Click the "Next" button on the "Welcome..." window
+   - Select the "I accept the agreement" radio button
+   - Click the "Next" button on the "License Agreement" window
+   - Click the "Next" button on the "Information" window
+   - Click the "Next" button on the "Select Destination Location" window
+   - Click the "Next" button on the "Select Components" window
+   - Click the "Next" button on the "Select Start Menu Folder" window
+   - Type the following in the "Port" textbox
+     9090
+     NOTE: This is the port that XSP will use.
+   - Click the "Next" button on the "Port Selection" window
+   - Click the "Install" button
+   - Wait for installation to complete
+   - Click the "Finish" button
+  
+********************************************************
+Windows SDK for Windows 7 and .NET Framework 4 - Acquire
+********************************************************
+
+1) Create download path
+  
+   - Click the Windows "Start" buton
+   - Enter the following in the "Search programs and files" textbox:
+     cmd
+   - Enter the following at the command line:  
+     md "D:\CscSoftware\Microsoft\Windows SDK for Windows 7 and .NET Framework 4 (ISO)\"
+   - Close the command window
+   
+2) Acquire Windows SDK for Windows 7 and .NET Framework 4
+   
+   - Open Internet Explorer
+   - Enter the following in the Address Bar:
+     http://www.microsoft.com/en-us/download/details.aspx?id=8442
+   - Select "DOWNLOAD" beside "GRMSDKX_EN_DVD.iso"
+     NOTES:
+	 - GRMSDK_EN_DVD.iso is for x86
+	 - GRMSDKX_EN_DVD.iso is for x64
+	 - GRMSDKIAI_EN_DVD.iso is for ia64
+   - Select "Save as"
+   - Navigate to:
+     D:\CscSoftware\Microsoft\Windows SDK for Windows 7 and .NET Framework 4 (ISO)\
+   - Click the "Save" button
+
+********************************************************
+Windows SDK for Windows 7 and .NET Framework 4 - Install
+********************************************************
+
+1) Uninstall Microsoft Visual C++ 2010 <Version> Redistributables
+
+   NOTE: The Windows SDK installation will likely fail, if these are not
+         uninstalled. This is caused by version conflicts. The Windows SDK will
+		 install version 10.0.30319 of the C++ redistributables. The C++
+		 distributables will be updated later when installing other software or
+		 through Windows update.
+
+   - Click the Windows "Start" button
+   - Type "remove" in the "Search programs amd files" tetxbox
+   - Select "Add or remove programs" under the "Control Panel" section
+   - Scroll down to "Microsoft Visual C++ 2010 x64 Redistributable - <Version>"
+   - Right click on "Microsoft Visual C++ 2010 x64 Redistributable - <Version>"
+   - Select "Uninstall" from the context menu
+   - If the "Prgrams and Features" dialog appears, click the "Yes" button
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Wait for uninstall to complete
+   - Right click on "Microsoft Visual C++ 2010 x86 Redistributable - <Version>"
+   - Select "Uninstall" from the context menu
+   - If the "Prgrams and Features" dialog appears, click the "Yes" button
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Wait for uninstall to complete
+   - Close the "Control Panel" --> "Programs" --> "Programs and Features" window
+   
+2) Install Windows SDK for Windows 7 and .NET Framework 4
+
+   - Open Windows Explorer
+   - Navigate to:
+     D:\CscSoftware\Microsoft\Windows SDK for Windows 7 and .NET Framework 4 (ISO)\
+   - Right click on "GRMSDKX_EN_DVD.iso"
+   - Select "Mount" from the context menu
+   - Wait for the "AutoPlay" window to appear
+   - Select "Run setup.exe"
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Click the "Next" button on the "Welcome..." window
+   - Select the "I Agree" radio button
+   - Click the "Next" button on the "End-User License Agreement" window
+   - If the "Uninstall Options" window appears, click the "Next" button
+   - Click the "Next" button on the "Install Locations" window
+   - Check "Redistributable Components"
+   - Click the "Next" button on the "Installation Options" window
+   - Click the "Next" button on the "Begin Installation" window
+   - Wait for installation to complete
+   - Uncheck "View the Windows SDK Release Notes"
+   - Click the "Finish" button
+   - Close Windows Explorer
+
+***********************
+GTK# for .NET - Acquire
+***********************
+
+NOTE: A version of "GTK# for .NET" is installed with Mono, but the version
+      installed with Mono is likely to not be the newer version that is
+	  required by Xamarin Studio.
+
+1) Create download path
+  
+   - Click the Windows "Start" buton
+   - Enter the following in the "Search programs and files" textbox:
+     cmd
+   - Enter the following at the command line:  
+     md "D:\CscSoftware\GTK# for .NET\"
+   - Close the command window
+   
+2) Acquire GTK# for .NET
+
+   - Open Internet Explorer
+   - Type the following in the address bar:
+     http://monodevelop.com/Download
+   - Select "Windows"
+   - Select "Download" beside "GTK# for .NET <Version>"
+   - Select "Save as"
+   - Navigate to:
+     D:\CscSoftware\GTK# for .NET\
+   - Click the "Save" button
+
+***********************
+GTK# for .NET - Install
+***********************
+
+- Open Windows Explorer
+- Navigate to
+  D:\CscSoftware\GTK# for .NET\
+- Double click on gtk-sharp-<Version>.msi
+- If the "Open File - Security Warning" window appears, click the "Run" button
+- Click the "Next" button on the "Welcome..." window
+- Click the "Next" button on the "Destination Folder" window
+- Click the "Install" button
+- If the "User Account Control" window appears, click the "Yes" button
+- Wait for installation to complete
+- Click the "Finish" button
+
+************************
+Xamarin Studio - Acquire
+************************
+
+1) Create download path
+  
+   - Click the Windows "Start" buton
+   - Enter the following in the "Search programs and files" textbox:
+     cmd
+   - Enter the following at the command line:  
+     md "D:\CscSoftware\Xamarin Studio\"
+   - Close the command window
+   
+2) Acquire Xamarin Studio
+
+   - Open Windows Explorer
+   - Create the following path:
+     D:\CscSoftware\Xamarin Studio\
+   - Open Internet Explorer
+   - Type the following in the address bar:
+     http://monodevelop.com/Main_Page
+   - Select "Download Now"
+   - Select "Windows"
+     NOTE: The following platforms have versions:
+     - openSUSE
+     - SLE
+     - Debian
+     - Ubuntu  
+     - Windows
+     - Mac OS X
+   - Select "Download" beside "Xamarin Studio 4.0.1 installer"
+   - Select "Save as"
+   - Navigate to:
+     D:\CscSoftware\Xamarin Studio\
+   - Click the "Save" button
+
+************************
+Xamarin Studio - Install
+************************
+
+1) Install Xamarin Studio
+  
+   - Open Windows Explorer
+   - Navigate to
+     DD:\CscSoftware\Xamarin Studio\
+   - Double click on "XamarinStudio-<Version>.msi"
+   - If the "Open File - Security Warning" window appears, click the "Run"
+     button
+   - Click the "Next" button on the "Welcome..." window
+   - Click the "Next" button on the "Destination Folder" window
+   - Click the "Install" button
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Wait for installation to complete
+   - Click the "Finish" button   
+
+**************************
+Xamarin Studio - Configure
+**************************
+
+1) Configure Xamarin Studio
+
+   - Click the Windows "Start" button
+   - Select "All Programs" --> "Xamarin Studio"
+   - If the "Xarmin Update" window appears, do the following:
+     - Select "Stable" from the "Update channel" dropdown
+     - Check "Check automatically"
+	 - Click the "Restart and Install Updates" button
+     - If the "User Account Control" windows appears, click the "Yes" button
+     - Wait for updates to complete
+   NOTE:
+   - The following message is displayed: "Welcome To Xamarin! Congratulations,
+     you're now ready to start building mobile apps for IOS and Andriod in C#.
+	 This free Starter edition allows you to build and ship small mobile apps
+	 to get a taste of using Xamarin. If you want the full experience, you can
+	 start a full-featured trial at any time. If you're already a customer,
+	 please log in to our Xamarin account. We've worked hard to make this the
+	 best platform for building mobile apps, and we hope you enjoy it."
+   - Select "Start Building Apps"   
+   
