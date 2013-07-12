@@ -4,16 +4,14 @@ sld-wizard
 Styled Layer Descriptor automation for VPF GIS data sets
 
 
-The SLD Wizard is a MS Windows command line utility written under the C# Mono Framework. 
+The SLD Wizard is an MS Windows command line utility written under the C# Mono Framework. 
 
 The SLD Wizard is used for creating Styled Layer Descriptor (SLD) files for GIS data stored in the United States Department of Defense Vector Product Format (VPF).
-The SLD Wizard uses the DoD's Geospatial Symbology for Digital Display (GeoSym) specification to style the VPF data accordingly. The combination of VPF, SLD and GeoSym
-is a nice recipe for great maps served via WMS.
+The SLD Wizard uses the DoD's Geospatial Symbology for Digital Display (GeoSym) specification to style the VPF data accordingly. The combination of VPF, SLD and GeoSym is a nice recipe for great maps served via WMS.
 
 VPF is the DoD’s attempt at converting all kinds of paper charts used in mission planning to GIS vector data.
 While not all VPF data is publically available, there are other accessible VPF datasets that can be useful.
-One of the most useful VPF datasets out there are the Digital Nautical Charts (DNC). DNC are unclassified, 
-vector-based digital databases containing significant maritime features. 
+One of the most useful VPF datasets out there are the Digital Nautical Charts (DNC). DNC are unclassified, vector-based digital databases containing significant maritime features. 
 
 Here is a link to some useful information regarding GeoSym and VPF:
 http://earth-info.nga.mil/publications/specs/
