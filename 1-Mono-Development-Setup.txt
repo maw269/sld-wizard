@@ -64,7 +64,70 @@ Mono - Install
    - Click the "Install" button
    - Wait for installation to complete
    - Click the "Finish" button
-  
+
+**************************************************************
+dotNet Framework - Step (Determine status of .NET Framework 4)
+**************************************************************
+
+1) Determine status of .NET framework 4
+   
+   - Click the Windows "Start" button
+   - Type "regedit" in the "Search programs and files" textbox
+   - Select "regedit.exe" under the "Programs" section
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Navigate to the following path in the leftmost panel:
+     Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP\v4\
+   - Determine if the Full folder is under:
+   - Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP\v4\
+   - If the Full folder is not found, proceed with acquisition and
+     installation of .NET Frameowrk 4
+   - If the Full folder is found, do the following:
+     - Select the Full folder
+     - Determine if Install key in the rightmost panel is set to 0x00000001 (1)
+     - If the Install key is not set to 0x00000001 (1), proceed with
+	   acquisition and installation of .NET Frameowrk 4
+     - If the Install key is set to 0x00000001 (1), skip acquisition and
+	   installation of .NET Frameowrk 4
+
+**************************************************
+dotNet Framework - Step (Acquire .NET framework 4)
+**************************************************
+
+1) Create directory for install package
+
+   - Open Windows Explorer
+   - Navigate to:
+     <Drive>:\CscSoftware\
+   - Make the following directory:
+     <Drive>:\CscSoftware\Microsoft\dotNET Framework 4 (Standalone Installer)\
+	 
+2) Acquire .NET framework 4
+
+   - Open Internet Explorer
+   - Enter the following in the Address Bar:
+     http://www.microsoft.com/en-us/download/details.aspx?id=17718
+   - Select "DOWNLOAD"
+   - If a May we also suggest window appears, select NO THANKS AND CONTINUE
+   - Save the file to the following directory:
+     <Drive>:\CscSoftware\Microsoft\dotNET Framework 4 (Standalone Installer)\
+   - Close Internet Explorer	   
+
+**************************************************
+dotNet Framework - Step (Install .NET framework 4)
+**************************************************
+
+1) Install .NET framework 4
+
+   - Navigate to:
+     <Drive>:\CscSoftware\Microsoft\dotNET Framework 4 (Standalone Installer)\
+   - Right click on dotNetFx40_Full_x86_x64.exe
+   - Select "Run as administrator" from the context menu
+   - If the "User Account Control" window appears, click the "Yes" button
+   - Check "I have read and accept the license terms"
+   - Click the "Install" button
+   - Wait for installation to complete
+   - Click the "Finish" button
+   
 ********************************************************
 Windows SDK for Windows 7 and .NET Framework 4 - Acquire
 ********************************************************
